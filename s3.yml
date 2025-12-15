@@ -1,5 +1,5 @@
 ---
-- name: anjalipradeep1512
+- name: anjalipradeep151
   hosts: localhost
   connection: local
   gather_facts: false
@@ -9,7 +9,7 @@
     aws_region: ap-south-1
  
   tasks:
-    - name: anjalipradeep1512
+    - name: anjalipradeep151
       amazon.aws.s3_bucket:
         name: "{{ bucket_name }}"
         state: present
