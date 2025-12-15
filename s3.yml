@@ -1,0 +1,23 @@
+---
+- name: anjalipradeep1512
+  hosts: localhost
+  connection: local
+  gather_facts: false
+ 
+  vars:
+    bucket_name: anjalipradeep1512
+    aws_region: ap-south-1
+ 
+  tasks:
+    - name: anjalipradeep1512
+      amazon.aws.s3_bucket:
+        name: "{{ bucket_name }}"
+        state: present
+        region: "{{ aws_region }}"
+ 
+    - name: Enable versioning on S3 bucket
+      amazon.aws.s3_bucket:
+        name: "{{ bucket_name }}"
+        versioning: yes
+        state: present
+        region: "{{ aws_region }}"
